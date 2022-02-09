@@ -1,0 +1,18 @@
+<h1> index </h1>
+
+<%= link_to "Add New Friend", new_friend_path %>
+
+<% @friends.each do |friend| %>
+  <table>
+    <tr>
+      <td><%= friend.id %></td>
+      <td><%= friend.name %></td>
+      <td><%= friend.riot_id %></td>
+      <td><%= friend.discord %></td>
+      <td><%= friend.facebook %></td>
+      <td><%= friend.twitter %></td>
+      <td><%= link_to "Edit", edit_friend_path(friend.id) %></td>
+      <td><%= link_to "Delete", delete_friend_path(friend.id), method: :delete, data: { confirm: "Are you sure?" } %></td>
+    </tr>
+  </table>
+<% end %>

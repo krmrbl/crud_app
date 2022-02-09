@@ -1,0 +1,27 @@
+<h1> new </h1>
+
+<%= form_with scope: :friend, local: true do |f| %>
+  <div>
+    <th><%= f.label :Name %></th>
+    <th><%= f.text_field :name %></th>
+  </div>
+  <div>
+    <th><%= f.label :Riot_ID, 'Riot ID' %></th>
+    <th><%= f.text_field :riot_id %></th>
+  </div>
+  <div>
+    <th><%= f.label :Discord %></th>
+    <th><%= f.text_field :discord %></th>
+  </div>
+  <div>
+    <th><%= f.label :Facebook %></th>
+    <th><%= f.text_field :facebook %></th>
+  </div>
+  <div>
+    <th><%= f.label :Twitter %></th>
+    <th><%= f.text_field :twitter %></th>
+  </div>
+  <div>
+    <%= f.submit :"Add" %>
+  </div>
+<% end %>

@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root 'friends#index'
+
+  get '/friends' => 'friends#index'
+  get '/new_friend' => 'friends#new'
+  post '/new_friend' => 'friends#create'
+  get '/edit/:id/friend' => 'friends#edit', as: 'edit_friend'
+  put '/edit/:id/friend' => 'friends#update', as: 'update_friend'
+  delete '/:id/friend' => 'friends#destroy', as: 'delete_friend'
+
 end
