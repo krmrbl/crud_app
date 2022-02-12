@@ -1,27 +1,28 @@
-<h1> edit </h1>
-
-<%= form_with scope: :friend, method: :put, local: true do |f| %>
-  <div>
-    <th><%= f.label :Name %></th>
-    <th><%= f.text_field :name %></th>
-  </div>
-  <div>
-    <th><%= f.label :Riot_ID, 'Riot ID' %></th>
-    <th><%= f.text_field :riot_id %></th>
-  </div>
-  <div>
-    <th><%= f.label :Discord %></th>
-    <th><%= f.text_field :discord %></th>
-  </div>
-  <div>
-    <th><%= f.label :Facebook %></th>
-    <th><%= f.text_field :facebook %></th>
-  </div>
-  <div>
-    <th><%= f.label :Twitter %></th>
-    <th><%= f.text_field :twitter %></th>
-  </div>
-  <div>
-    <%= f.submit :"Edit" %>
-  </div>
-<% end %>
+<div class="form-container">
+  <%= form_with scope: :friend, method: :put, local: true do |f| %>
+    <div class="edit-label">
+      <div class="form-label"><%= f.label :Name %></div>
+      <th class="text-field"><%= f.text_field :name %></th>
+    </div>
+    <div class="edit-label">
+      <div class="form-label"><%= f.label :Riot_ID, 'Riot ID' %></div>
+      <th class="text-field"><%= f.text_field :riot_id %></th>
+    </div>
+    <div class="edit-label">
+      <div class="form-label"><%= f.label :Discord %></div>
+      <th class="text-field"><%= f.text_field :discord %></th>
+    </div>
+    <div class="edit-label">
+      <div class="form-label"><%= f.label :Facebook %></div>
+      <th class="text-field"><%= f.text_field :facebook %></th>
+    </div>
+    <div class="edit-label">
+      <div class="form-label"><%= f.label :Twitter %></div>
+      <th class="text-field"><%= f.text_field :twitter %></th>
+    </div>
+    <div class="form-buttons-container">
+      <%= f.submit :"EDIT" %>
+      <button type="button" class="form-button"><%= link_to "BACK", friends_path %></button>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,23 @@
+<div class="show-container">
+  <div class="close-bar"><button type="button" class="close-show"><%= link_to "X", friends_path %></button></div>
+  <div class="basic-info">
+    <div class="name-id">
+      <div class="name"><%= @friend.name %></div>
+      <div class="id"><%= @friend.riot_id %></div>
+    </div>
+  </div>
+  <div class="other-info">
+    <div class="info">
+      <div class="discord-logo"></div>
+      <div class="show-data"><%= @friend.discord %></div>
+    </div>
+    <div class="info">
+      <div class="facebook-logo"></div>
+      <div class="show-data"><%= @friend.facebook %></div>
+    </div>
+    <div class="info">
+      <div class="twitter-logo"></div>
+      <div class="show-data"><%= @friend.twitter %></div>
+    </div>
+  </div>
+</div>

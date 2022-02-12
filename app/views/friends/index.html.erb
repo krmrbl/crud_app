@@ -1,18 +1,33 @@
-<h1> index </h1>
+<head>
+  <title><%= @title %></title>
+</head>
 
-<%= link_to "Add New Friend", new_friend_path %>
-
-<% @friends.each do |friend| %>
-  <table>
-    <tr>
-      <td><%= friend.id %></td>
-      <td><%= friend.name %></td>
-      <td><%= friend.riot_id %></td>
-      <td><%= friend.discord %></td>
-      <td><%= friend.facebook %></td>
-      <td><%= friend.twitter %></td>
-      <td><%= link_to "Edit", edit_friend_path(friend.id) %></td>
-      <td><%= link_to "Delete", delete_friend_path(friend.id), method: :delete, data: { confirm: "Are you sure?" } %></td>
-    </tr>
-  </table>
-<% end %>
+<div class="friends-table">
+  <div class="label-bar">
+    <div class="label">NAME</div>
+    <div class="label">RIOT ID</div>
+    <div class="label">DISCORD</div>
+    <div class="label">FACEBOOK</div>
+    <div class="label">TWITTER</div>
+    <div class="action-buttons">
+      <button type="button" class="add-friend-button">
+      <%= link_to "+", friend_new_path, title: "Add New Friend" %>
+      </button>
+    </div>
+  </div>
+  <div class="data-container">
+  <% @friends.each do |friend| %>
+    <div class="data-row">
+      <div class="data"><%= friend.name %></div>
+      <div class="data"><%= friend.riot_id %></div>
+      <div class="data"><%= friend.discord %></div>
+      <div class="data"><%= friend.facebook %></div>
+      <div class="data"><%= friend.twitter %></div>
+      <div class="action-buttons">
+        <div class="view-btn"><%= link_to "V", show_friend_path(friend.id), title: "Show" %></div>
+        <div class="edit-btn"><%= link_to "E", edit_friend_path(friend.id), title: "Edit" %></div>
+        <div class="delete-btn"><%= link_to "D", delete_friend_path(friend.id), title: "Delete", method: :delete %></div>      
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500&display=swap');
+
+body {
+  padding: 20px;
+  background-color: #DEEBF7;
+  overflow-x: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+/* index */
+
+.friends-table {
+  margin: 0 auto;
+  width: 95vw;
+}
+
+.label-bar {
+  margin-bottom: 5px;
+  display: flex;
+  height: 50px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0B0B45;
+}
+
+.label, .data {
+  width: 185px;
+  padding: 20px;
+}
+
+.data-row {
+  margin-bottom: 20px;
+  display: flex;
+  height: 48px;
+  background-color: white;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px grey;
+  transition: 0.5s;
+}
+
+.data-row:hover {
+  box-shadow: none;
+}
+
+.data {
+  color: #161616;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-weight: 400;
+}
+
+.action-buttons {
+  width: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.view-btn:hover, .edit-btn:hover, .delete-btn:hover {
+  transform: scale(1.3);
+}
+
+.add-friend-button {
+  background-color: #0B0B45;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+.add-friend-button a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.add-friend-button:hover a {
+  color: #0B0B45;
+}
+
+.view-btn {
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  background-image: url(https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2018/png/iconmonstr-eye-thin.png&r=11&g=11&b=69);
+  transition: 0.2s;
+}
+
+.edit-btn {
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  background-image: url(https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2018/png/iconmonstr-pencil-thin.png&r=11&g=11&b=69);
+  transition: 0.2s;
+}
+
+.delete-btn {
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  background-image: url(https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2018/png/iconmonstr-trash-can-thin.png&r=11&g=11&b=69);
+  transition: 0.2s;
+}
+
+.view-btn a, .edit-btn a, .delete-btn a {
+  color: transparent;
+}
+
+/* edit */
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 450px;
+  height: 380px;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 2px 2px 5px grey;
+  transition: 0.5s;
+}
+
+.form-container:hover {
+  box-shadow: none;
+}
+
+.edit-label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0B0B45;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  margin-bottom: 2px;
+}
+
+.edit-label input[type=text] {
+  padding: 5px;
+  color: #161616;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  border: none;
+}
+
+.edit-label input[type=text]:hover {
+  background-color: #DEEBF7;
+  border-radius: 5px;
+}
+
+.edit-label input[type=text]:focus {
+  outline: none;
+  border-bottom: 2px solid #0B0B45;
+}
+
+.form-buttons-container {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-buttons-container input[type=submit], .form-buttons-container button {
+  margin: -10px 10px 0px 10px;
+  cursor: pointer;
+  background-color: none;
+  width: 60px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  background-color: #0B0B45;
+  color: white;
+}
+
+.form-button a {
+  color: white;
+  background-color: #0B0B45;
+  text-decoration: none;
+}
+
+.form-buttons-container input[type=submit]:hover, button:hover {
+  color: #0B0B45;
+  background-color: #EFEFEF;
+}
+
+.form-button:hover a {
+  color: #0B0B45;
+  background-color: #EFEFEF;
+}
+
+/* show */
+
+.show-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 450px;
+  height: 300px;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 2px 2px 5px grey;
+}
+
+.close-bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-show {
+  background-color: white;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+
+.close-show a {
+  text-decoration: none;
+  color: #0B0B45;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.basic-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  height: 120px;
+  text-align: center;
+}
+
+.basic-info .name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: #0B0B45;
+  text-transform: uppercase;
+}
+
+.basic-info .id {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #161616;
+  margin-top: -10px;
+}
+
+.other-info {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+}
+
+.discord-logo, .facebook-logo, .twitter-logo {
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-size: cover;
+}
+
+.discord-logo {
+  background-image: url(https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2018/png/iconmonstr-discord-1.png&r=88&g=101&b=242);
+}
+
+.facebook-logo {
+  background-image: url(https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-facebook-3.png&r=66&g=103&b=178);
+}
+
+.twitter-logo {
+  background-image: url(https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2012/png/iconmonstr-twitter-3.png&r=0&g=172&b=238);
+}
+
+.show-data {
+  margin-top: 5px;
+  color: #161616;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}

@@ -15,7 +15,9 @@ class FriendsController < ApplicationController
     end
   end
 
-  private
+  def show
+    @friend = Friend.find(params[:id])
+  end
 
   def edit
     @friend = Friend.find(params[:id])
@@ -38,6 +40,8 @@ class FriendsController < ApplicationController
       render :index
     end
   end
+
+  private
 
   def friend_data
     params.require(:friend).permit(:name, :riot_id, :discord, :facebook, :twitter)
